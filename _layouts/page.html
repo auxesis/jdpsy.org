@@ -1,27 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }} - {{ site.title }}</title>
+    <title>{{ page.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% include externals.html %}
   </head>
   <body>
     <div class="container">
-      {% include header.html %}
+      <div id="header-wrapper">
+        {% include header.html %}
+      </div>
 
-      <div id="content" class="page">
+      <div id="content">
         {{ content }}
       </div> <!-- content -->
 
-      <ul class="pager">
-        <li class="previous">
-          <a href="{{ site.url }}/"><i class="fa fa-arrow-circle-o-left fa-lg"></i> read articles</a>
-        </li>
-      </ul>
+      <footer>
+        <p class="text-center">
+          &copy; 2017 Jeroen Decates
+        </p>
+      </footer>
 
-    </div>
-    {% if site.url contains "jdpsy.org" %}
+    </div> <!-- wrapper -->
     {% include google-analytics.html %}
-    {% endif %}
   </body>
 </html>
