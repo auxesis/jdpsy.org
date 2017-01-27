@@ -1,3 +1,12 @@
+div#blog-title h1 {
+  font-size: 50px;
+}
+
+div#blog-title h1 a:hover {
+  border-bottom: none;
+  text-decoration: none;
+}
+
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -20,4 +29,17 @@
 .jumbotron a.call-to-action {
   margin-top: 30px;
   display: block;
+}
+
+div.call-to-action a {
+  margin-top: 30px;
+  display: inline-block;
+}
+
+div.call-to-action span.intro {
+  margin-right: 15px;
+}
+
+footer {
+  padding: 30px;
 }
