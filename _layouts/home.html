@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ page.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include externals.html %}
+  </head>
+  <body>
+    <div class="container">
+      <div id="header-wrapper">
+        {% include header.html %}
+      </div>
+
+      <div id="content">
+        {{ content }}
+      </div> <!-- content -->
+
+    </div> <!-- wrapper -->
+    {% include google-analytics.html %}
+  </body>
+</html>
