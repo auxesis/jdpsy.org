@@ -39,7 +39,7 @@ title: About – Jeroen Decates
   <div class="col-md-12">
     <a href="/services">
       <button class="btn btn-primary btn-lg">
-        See services Jeroen provides
+        See the services Jeroen provides
         <i class="fa fa-fw fa-arrow-circle-right"></i>
       </button>
     </a>
