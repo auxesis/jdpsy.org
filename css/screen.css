@@ -7,6 +7,23 @@ div#blog-title h1 a:hover {
   text-decoration: none;
 }
 
+.navbar {
+  font-size: 140%;
+}
+
+@media (min-width: 768px) {
+  .navbar .navbar-nav {
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+  }
+
+  .navbar .navbar-header {
+    text-align: center;
+  }
+}
+
+/*
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
@@ -14,12 +31,17 @@ div#blog-title h1 a:hover {
   font-size: 140%;
 }
 
-.navbar .navbar-collapse {
+.navbar .navbar-header {
   text-align: center;
 }
+*/
 
 .navbar li {
   padding: 10px;
+}
+
+.navbar li i.fa {
+  margin-right: 5px;
 }
 
 .page-header {
