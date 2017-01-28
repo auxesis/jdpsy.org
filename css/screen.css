@@ -23,19 +23,6 @@ div#blog-title h1 a:hover {
   }
 }
 
-/*
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-  font-size: 140%;
-}
-
-.navbar .navbar-header {
-  text-align: center;
-}
-*/
-
 .navbar li {
   padding: 10px;
 }
