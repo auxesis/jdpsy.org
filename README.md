@@ -44,7 +44,7 @@ Select and clone the `jdpsy.org` repository:
 
 Open the repository in terminal:
 
-![screenshot of opening the repo in GitHub Desktop](/img/readme/open-in-terminal.png)
+![screenshot of launching terminal  in GitHub Desktop](/img/readme/open-in-terminal.png)
 
 Type `sudo ./setup.sh` into the terminal, and press enter:
 
@@ -55,6 +55,10 @@ Type `sudo ./setup.sh` into the terminal, and press enter:
 **NOTE: Make sure you have followed the setup steps before trying this.**
 
 ### See a local copy of the site
+
+From GitHub Desktop, open the repository in terminal:
+
+![screenshot of launching terminal  in GitHub Desktop](/img/readme/open-in-terminal.png)
 
 Start up a local copy of the site by typing `jekyll serve` and pressing enter:
 
