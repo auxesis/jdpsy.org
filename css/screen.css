@@ -7,19 +7,16 @@ div#blog-title h1 a:hover {
   text-decoration: none;
 }
 
-.navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
+.navbar {
   font-size: 140%;
-}
-
-.navbar .navbar-collapse {
-  text-align: center;
 }
 
 .navbar li {
   padding: 10px;
+}
+
+.navbar li i.fa {
+  margin-right: 5px;
 }
 
 .page-header {
