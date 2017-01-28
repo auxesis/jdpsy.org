@@ -2,6 +2,8 @@
 
 This is the source for Jeroen Decates's clinic website.
 
+![screenshot of home page](/img/readme/homepage.png)
+
 ## How does this work?
 
  - [jdpsy.org](http://jdpsy.org) is served off _GitHub Pages_. GitHub Pages is a free website hosting system provided by _GitHub_.
