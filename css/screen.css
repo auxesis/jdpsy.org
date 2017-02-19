@@ -28,6 +28,10 @@ div#blog-title h1 a:hover {
   display: block;
 }
 
+div.first h2:first-of-type {
+  margin-top: 0;
+}
+
 div.call-to-action a {
   margin-top: 30px;
   display: inline-block;
