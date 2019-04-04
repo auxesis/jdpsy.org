@@ -6,13 +6,13 @@ This is the source for Jeroen Decates's clinic website.
 
 ## How does this work?
 
- - [jdpsy.org](http://jdpsy.org) is served off _GitHub Pages_. GitHub Pages is a free website hosting system provided by _GitHub_.
+ - [jdpsy.org](https://jdpsy.org) is served off _GitHub Pages_. GitHub Pages is a free website hosting system provided by _GitHub_.
  - The jdpsy.org website is stored in a _repository_. A repository is a collection of files under a directory. A repository tracks all the changes you make to files in the repository. Your repository lives on GitHub.
  - The jdpsy.org website is built using a tool called _[Jekyll](https://jekyllrb.com/)_. Jekyll is a very simple system for building websites.
  - You make changes to the jdpsy.org website in a _local copy_ of the repository. This local copy is sometimes called a _clone_.
  - When you make changes to the local copy, you must record the changes. We do this by making a _commit_. A commit is one or more changes (like adding an image, removing some text), with a _description_ of the change. The description is helpful for remembering _why_ you made a change.
  - When you've finished making your changes, you publish the website by _syncing_ the repository back to GitHub.
- - GitHub Pages sees your changes, and publishes them so everyone else can see them at http://jdpsy.org.
+ - GitHub Pages sees your changes, and publishes them so everyone else can see them at https://jdpsy.org.
 
 ## First time setup
 
@@ -104,8 +104,8 @@ Then click the _Commit_ button at the bottom of the window.
 
 ### Publish your changes
 
-To publish your changes to the real [jdpsy.org](http://jdpsy.org/), press the _Sync_ button in the top right:
+To publish your changes to the real [jdpsy.org](https://jdpsy.org/), press the _Sync_ button in the top right:
 
 ![screenshot of selecting a file in atom](/img/readme/sync-to-github.png)
 
-Go to http://jdpsy.org in your browser to see your changes.
+Go to https://jdpsy.org in your browser to see your changes.
