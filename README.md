@@ -84,7 +84,7 @@ Make some changes to the text or HTML, and save:
 
 See the changes in the browser by navigating to the page.
 
-The website is built with [Jekyll](https://jekyllrb.com/), [Bootstrap](http://getbootstrap.com/, and [Font Awesome](http://fontawesome.io/).
+The website is built with [Jekyll](https://jekyllrb.com/), [Bootstrap](http://getbootstrap.com/), and [Font Awesome](http://fontawesome.io/).
 
 If you want to make changes to the page layout or the display of content, check out Bootstrap's [excellent reference documentation](http://getbootstrap.com/css/).
 
