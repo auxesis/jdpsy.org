@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>{{ page.title }} – Jeroen Decates</title>
+    <title>{{ .Title }} – Jeroen Decates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% include externals.html %}
+    {{ partial "includes" }}
   </head>
   <body>
     <div class="container">
       <div id="header-wrapper">
-        {% include header.html %}
+        {{ partial "header" }}
       </div>
 
       <div id="content">
-        {{ content }}
+        {{ .Content }}
       </div> <!-- content -->
 
       <footer>
         <p class="text-center">
-          &copy; {{ 'now' | date: "%Y" }} Jeroen Decates
+          &copy; {{ now.Format "2006" }} Jeroen Decates
         </p>
       </footer>
 
     </div> <!-- wrapper -->
-    {% include google-analytics.html %}
-    {% include bootstrap.html %}
+    {{ partial "google-analytics" }}
   </body>
 </html>
