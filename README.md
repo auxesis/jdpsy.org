@@ -2,7 +2,7 @@
 
 This is the source for Jeroen Decates's clinic website.
 
-![screenshot of home page](/img/readme/homepage.png)
+![screenshot of home page](/static/img/readme/homepage.png)
 
 ## How does this work?
 
@@ -36,19 +36,19 @@ Download and install:
 
 In GitHub Desktop, clone the repository:
 
-![screenshot of cloning the repo](/img/readme/clone-the-repo.png)
+![screenshot of cloning the repo](/static/img/readme/clone-the-repo.png)
 
 Select and clone the `jdpsy.org` repository:
 
-![screenshot of selecting the repo](/img/readme/select-jdpsy-for-cloning.png)
+![screenshot of selecting the repo](/static/img/readme/select-jdpsy-for-cloning.png)
 
 Open the repository in terminal:
 
-![screenshot of launching terminal  in GitHub Desktop](/img/readme/open-in-terminal.png)
+![screenshot of launching terminal  in GitHub Desktop](/static/img/readme/open-in-terminal.png)
 
 Type `sudo ./setup.sh` into the terminal, and press enter:
 
-![screenshot of running setup script](/img/readme/run-setup-script.png)
+![screenshot of running setup script](/static/img/readme/run-setup-script.png)
 
 ## How to make changes
 
@@ -58,29 +58,29 @@ Type `sudo ./setup.sh` into the terminal, and press enter:
 
 From GitHub Desktop, open the repository in terminal:
 
-![screenshot of launching terminal  in GitHub Desktop](/img/readme/open-in-terminal.png)
+![screenshot of launching terminal  in GitHub Desktop](/static/img/readme/open-in-terminal.png)
 
 Start up a local copy of the site by typing `jekyll serve` and pressing enter:
 
-![screenshot of starting jekyll](/img/readme/start-jekyll.png)
+![screenshot of starting jekyll](/static/img/readme/start-jekyll.png)
 
 Then go to http://localhost:4000/ in your browser:
 
-![screenshot of starting jekyll](/img/readme/see-local-site.png)
+![screenshot of starting jekyll](/static/img/readme/see-local-site.png)
 
 ### Make some changes
 
 Back in GitHub Desktop, open the repo in Atom:
 
-![screenshot of opening the repo in atom](/img/readme/open-in-atom.png)
+![screenshot of opening the repo in atom](/static/img/readme/open-in-atom.png)
 
 Select the file you want to edit:
 
-![screenshot of selecting a file in atom](/img/readme/select-file-in-atom.png)
+![screenshot of selecting a file in atom](/static/img/readme/select-file-in-atom.png)
 
 Make some changes to the text or HTML, and save:
 
-![screenshot of selecting a file in atom](/img/readme/save-change-in-atom.png)
+![screenshot of selecting a file in atom](/static/img/readme/save-change-in-atom.png)
 
 See the changes in the browser by navigating to the page.
 
@@ -98,7 +98,7 @@ You can [browse icons](http://fontawesome.io/icons/) on Font Awesome, and add el
 
 Back in GitHub Desktop, switch to the _Uncommitted Changes_ tab, and describe your changes:
 
-![screenshot of committing the change in GitHub Desktop](/img/readme/save-change-in-github-desktop.png)
+![screenshot of committing the change in GitHub Desktop](/static/img/readme/save-change-in-github-desktop.png)
 
 Then click the _Commit_ button at the bottom of the window.
 
@@ -106,6 +106,6 @@ Then click the _Commit_ button at the bottom of the window.
 
 To publish your changes to the real [jdpsy.org](https://jdpsy.org/), press the _Sync_ button in the top right:
 
-![screenshot of selecting a file in atom](/img/readme/sync-to-github.png)
+![screenshot of selecting a file in atom](/static/img/readme/sync-to-github.png)
 
 Go to https://jdpsy.org in your browser to see your changes.
