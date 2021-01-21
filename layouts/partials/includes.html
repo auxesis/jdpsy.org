@@ -1,4 +1,4 @@
-{{ $bootstrap := resources.Get "css/bootstrap-3.3.7.css" | minify | fingerprint }}
+{{ $bootstrap := resources.Get "css/bootstrap.css" | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $bootstrap.Permalink }}">
 {{ $fontAwesome := resources.Get "css/font-awesome.min.css" | fingerprint }}
 <link rel="stylesheet" href="{{ $fontAwesome.Permalink }}">
