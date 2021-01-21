@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ .Title }} – Jeroen Decates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootswatch/3.3.7/yeti/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css/screen.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="header-wrapper">
+        {{ partial "header" }}
+      </div>
+
+      <div id="content">
+        {{ .Content }}
+      </div> <!-- content -->
+
+      <footer>
+        <p class="text-center">
+          &copy; {{ now.Format "2006" }} Jeroen Decates
+        </p>
+      </footer>
+
+    </div> <!-- wrapper -->
+    {{ partial "google-analytics" }}
+    {{ partial "bootstrap" }}
+  </body>
+</html>
