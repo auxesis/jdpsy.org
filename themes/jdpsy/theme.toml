@@ -4,7 +4,7 @@
 name = "JDPSY"
 license = "MIT"
 licenselink = "https://github.com/auxesis/jdpsy.org/blob/master/themes/jdpsy/LICENSE"
-description = ""
+description = "Website theme for jdpsy.org"
 homepage = "https://jdpsy.org/"
 tags = []
 features = []
