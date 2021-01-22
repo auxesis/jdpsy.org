@@ -6,9 +6,9 @@ This is the source for Jeroen Decates's clinic website.
 
 ## How does this work?
 
- - [jdpsy.org](https://jdpsy.org) is served off _GitHub Pages_. GitHub Pages is a free website hosting system provided by _GitHub_.
+ - [jdpsy.org](https://jdpsy.org) is served off _Netlify_. Netlify is a free website hosting system.
  - The jdpsy.org website is stored in a _repository_. A repository is a collection of files under a directory. A repository tracks all the changes you make to files in the repository. Your repository lives on GitHub.
- - The jdpsy.org website is built using a tool called _[Jekyll](https://jekyllrb.com/)_. Jekyll is a very simple system for building websites.
+ - The jdpsy.org website is built using a tool called _[Hugo](https://gohugo.io/)_. Hugo is a very simple system for building websites.
  - You make changes to the jdpsy.org website in a _local copy_ of the repository. This local copy is sometimes called a _clone_.
  - When you make changes to the local copy, you must record the changes. We do this by making a _commit_. A commit is one or more changes (like adding an image, removing some text), with a _description_ of the change. The description is helpful for remembering _why_ you made a change.
  - When you've finished making your changes, you publish the website by _syncing_ the repository back to GitHub.
@@ -60,13 +60,13 @@ From GitHub Desktop, open the repository in terminal:
 
 ![screenshot of launching terminal  in GitHub Desktop](/static/img/readme/open-in-terminal.png)
 
-Start up a local copy of the site by typing `jekyll serve` and pressing enter:
+Start up a local copy of the site by typing `hugo server` and pressing enter:
 
-![screenshot of starting jekyll](/static/img/readme/start-jekyll.png)
+![screenshot of starting hugo](/static/img/readme/start-hugo.png)
 
-Then go to http://localhost:4000/ in your browser:
+Then go to http://localhost:1313/ in your browser:
 
-![screenshot of starting jekyll](/static/img/readme/see-local-site.png)
+![screenshot of the dev site in the browser](/static/img/readme/see-local-site.png)
 
 ### Make some changes
 
@@ -84,7 +84,7 @@ Make some changes to the text or HTML, and save:
 
 See the changes in the browser by navigating to the page.
 
-The website is built with [Jekyll](https://jekyllrb.com/), [Bootstrap](http://getbootstrap.com/), and [Font Awesome](http://fontawesome.io/).
+The website is built with [Hugo](https://gohugo.io/), [Bootstrap](http://getbootstrap.com/), and [Font Awesome](http://fontawesome.io/).
 
 If you want to make changes to the page layout or the display of content, check out Bootstrap's [excellent reference documentation](http://getbootstrap.com/css/).
 
