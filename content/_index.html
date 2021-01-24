@@ -5,7 +5,7 @@ description: Jeroen Decates' neurodiversity friendly psychology practice
 ---
 
 <div class="jumbotron">
-  <h1>Neurodiversity Friendly Practice</h1>
+  <h1 class="display-4">Neurodiversity Friendly Practice</h1>
 </div>
 
 <div class="row">
@@ -16,11 +16,13 @@ description: Jeroen Decates' neurodiversity friendly psychology practice
       Jeroen likes to include family in the therapeutic process.
       Partners, family and or close friends are encouraged to attend the first session at least.
     </p>
-    <div class="panel panel-default">
-      <div class="panel-heading">COVIDSafe precautions</div>
-      <div class="panel-body">
+    <div class="card card-default">
+      <div class="card-header">
+        <strong>COVIDSafe precautions</strong>
+      </div>
+      <div class="card-body">
+        <img class="float-left covidsafe logo" src="/img/covidsafe.png"/>
         <p>
-          <img class="pull-left covidsafe logo" src="/img/covidsafe.png"/>
           To ensure we comply with COVIDSafe protocols most of Jeroen’s sessions are held online via Zoom Pro.
           Since the introduction of Telehealth <strong>Jeroen now offers sessions to clients Australia wide</strong>.
         </p>
@@ -29,15 +31,8 @@ description: Jeroen Decates' neurodiversity friendly psychology practice
         </p>
       </div>
     </div>
-  </div>
-  <div class="col-md-4">
-    {{% include "content/contact-widget.html" %}}
-  </div>
-</div>
 
-<div class="row call-to-action">
-  <div class="col-md-12">
-    <p>
+    <p class="mt-4">
       <a href="/about/">
         <button class="btn btn-primary btn-lg">
           Learn more about Jeroen
@@ -45,5 +40,8 @@ description: Jeroen Decates' neurodiversity friendly psychology practice
         </button>
       </a>
     </p>
+  </div>
+  <div class="col-md-4">
+    {{% include "content/contact-widget.html" %}}
   </div>
 </div>
