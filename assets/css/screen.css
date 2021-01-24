@@ -28,8 +28,13 @@ div#blog-title h1 a:hover {
 }
 
 .jumbotron {
+  background-color: #fafafa;
   padding: 4rem 2rem;
   margin-bottom: 2rem;
+}
+
+.jumbotron p.lead {
+  font-size: 150%;
 }
 
 img.covidsafe.logo {
