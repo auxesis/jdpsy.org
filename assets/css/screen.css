@@ -1,3 +1,7 @@
+div#blog-title {
+  padding: 35px;
+}
+
 div#blog-title h1 {
   font-size: 50px;
 }
@@ -11,21 +15,20 @@ div#blog-title h1 a:hover {
   font-size: 140%;
 }
 
-.navbar li {
-  padding: 10px;
+.navbar a {
+  color: white;
 }
 
-.navbar li i.fa {
-  margin-right: 5px;
+#header-wrapper {
+  margin-bottom: 30px;
 }
 
 .page-header {
   border-bottom: none;
 }
 
-.jumbotron a.call-to-action {
-  margin-top: 30px;
-  display: block;
+.jumbotron {
+  padding: 4rem 2rem;
 }
 
 img.covidsafe.logo {

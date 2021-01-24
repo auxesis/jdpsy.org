@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{{ .Title }} – Jeroen Decates</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{ partial "includes" . }}
+  </head>
+  <body>
+    <div class="container">
+      <div id="header-wrapper">
+        {{ partial "header" }}
+      </div>
+
+      <div id="content">
+        <div class="container-fluid">
+          {{ .Content }}
+        </div> <!-- container-fluid -->
+      </div> <!-- content -->
+
+      <footer>
+        <p class="text-center">
+          &copy; {{ now.Format "2006" }} Jeroen Decates
+        </p>
+      </footer>
+
+    </div> <!-- wrapper -->
+    {{ partial "google-analytics" }}
+  </body>
+</html>
