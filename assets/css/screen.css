@@ -28,6 +28,11 @@ div#blog-title h1 a:hover {
   display: block;
 }
 
+img.covidsafe.logo {
+  width: 150px;
+  margin-right: 15px;
+}
+
 div.first h2:first-of-type {
   margin-top: 0;
 }
