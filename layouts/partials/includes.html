@@ -3,3 +3,8 @@
 {{- $screen := resources.Get "css/screen.css" | minify }}
 {{- $styles := slice $bootstrap $fontAwesome $screen | resources.Concat "css/style.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
+    <meta property="og:url"                content="{{ .Permalink }}" />
+    <meta property="og:type"               content="website" />
+    <meta property="og:title"              content="{{ .Title }}" />
+    <meta property="og:description"        content="{{ .Description }}" />
+    <meta property="og:image"              content="https://jdpsy.org/about/jeroen.jpg" />
