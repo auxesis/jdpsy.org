@@ -1,0 +1,3 @@
+{{- $page := (relURL (index . 0).RelPermalink) }}
+{{- $path := (index . 1) }}
+{{- if eq $page $path -}} active {{- end -}}
