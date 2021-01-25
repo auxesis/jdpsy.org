@@ -1,6 +1,6 @@
 <pre style="display: none">
 Pages:
 {{ range .Site.Pages -}}
-  {{ . }} – {{ .RelPermalink }} - {{ relURL .RelPermalink }}
+  {{ . }} # {{ .RelPermalink }} # relURL: {{ relURL .RelPermalink }} # eq: {{ eq (relURL .RelPermalink) "/about/" }}
 {{ end -}}
 </pre>
