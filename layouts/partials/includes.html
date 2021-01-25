@@ -3,12 +3,3 @@
 {{- $screen := resources.Get "css/screen.css" | minify }}
 {{- $styles := slice $bootstrap $fontAwesome $screen | resources.Concat "css/style.css" | fingerprint }}
     <link rel="stylesheet" href="{{ $styles.Permalink }}">
-    <meta property="og:url"         content="{{ .Permalink }}" />
-    <meta property="og:type"        content="website" />
-    <meta property="og:title"       content="{{ .Title }} | {{ .Site.Title }}" />
-    <meta property="og:description" content="{{ .Description }}" />
-    {{- if (isset .Params "social_image") }}
-    <meta property="og:image"       content="{{ index .Params "social_image" | absURL }}" />
-    {{- else }}
-    <meta property="og:image"       content="{{ "/about/jeroen.jpg" | absURL }}" />
-    {{- end }}
