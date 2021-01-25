@@ -1,3 +1,6 @@
 languageCode = "en-us"
-title = "JDPSY"
+title = "Jeroen Decates"
 disableKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+  tagline = "Consultant Clinical Psychologist"
