@@ -3,8 +3,8 @@ Pages:
 {{ range .Site.Pages -}}
   {{ . }}
     - .RelPermalink: {{ .RelPermalink }}
-    - relURL:        {{ relURL .RelPermalink }}
+    - relURL:        {{ relURL .RelPermalink | string }}
     - string:        /about/
-    - eq:            {{ eq (relURL .RelPermalink) "/about/" }}
+    - eq:            {{ eq (relURL .RelPermalink | string) "/about/" }}
 {{ end -}}
 </pre>
