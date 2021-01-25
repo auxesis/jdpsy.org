@@ -8,6 +8,9 @@
     {{ partial "meta" . }}
   </head>
   <body>
+    {{ if (eq .Title "Debug") -}}
+      {{ partial "debug" . }}
+    {{ end -}}
     <div class="container">
       <div id="header-wrapper">
         {{ partial "page-header" . }}

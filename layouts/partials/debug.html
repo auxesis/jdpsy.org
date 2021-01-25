@@ -1,0 +1,6 @@
+<pre>
+Pages:
+{{ range .Site.Pages -}}
+  {{ . }} – {{ .RelPermalink }} - {{ relURL .RelPermalink }}
+{{ end -}}
+</pre>
