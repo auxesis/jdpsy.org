@@ -1,18 +1,18 @@
       <div class="container-fluid">
         <nav class="navbar nav-pills navbar-expand-lg navbar-dark bg-dark flex-column flex-sm-row">
-          <a class="nav-link flex-sm-fill text-sm-center" href="/about/">
+          <a class="nav-link flex-sm-fill text-sm-center {{ if (eq (relURL .RelPermalink) "/about/") }} active {{ end }}" href="/about/">
             <i class="far fa-fw fa-lightbulb mr-2"></i>
             About
           </a>
-          <a class="nav-link flex-sm-fill text-sm-center" href="/services/">
+          <a class="nav-link flex-sm-fill text-sm-center {{ if (eq (relURL .RelPermalink) "/services/") }} active {{ end }}" href="/services/">
             <i class="fa fa-fw fa-key mr-2"></i>
             Services
           </a>
-          <a class="nav-link flex-sm-fill text-sm-center" href="/appointments/">
+          <a class="nav-link flex-sm-fill text-sm-center {{ if (eq (relURL .RelPermalink) "/appointments/") }} active {{ end }}" href="/appointments/">
             <i class="far fa-fw fa-paper-plane mr-2"></i>
             Appointments
           </a>
-          <a class="nav-link flex-sm-fill text-sm-center" href="/groups/">
+          <a class="nav-link flex-sm-fill text-sm-center {{ if (eq (relURL .RelPermalink) "/groups/") }} active {{ end }}" href="/groups/">
             <i class="fa fa-fw fa-users mr-2"></i>
             Groups
           </a>
