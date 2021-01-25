@@ -7,4 +7,8 @@
     <meta property="og:type"        content="website" />
     <meta property="og:title"       content="{{ .Title }}" />
     <meta property="og:description" content="{{ .Description }}" />
-    <meta property="og:image"       content="https://jdpsy.org/about/jeroen.jpg" />
+    {{- if (isset .Params "social_image") }}
+    <meta property="og:image"       content="{{ index .Params "social_image" | absURL }}" />
+    {{- else }}
+    <meta property="og:image"       content="{{ "/about/jeroen.jpg" | absURL }}" />
+    {{- end }}
