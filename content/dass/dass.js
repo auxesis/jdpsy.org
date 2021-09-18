@@ -61,6 +61,7 @@ class DassQuestion extends React.Component {
               id={"q-" + i + "-0"}
               value="0"
               onClick={() => this.props.onAnswer({ number: i, value: 0 })}
+              required
             />
             <label className="form-check-label" htmlFor={"q-" + i + "-0"}>
               Never
@@ -74,6 +75,7 @@ class DassQuestion extends React.Component {
               id={"q-" + i + "-1"}
               value="1"
               onClick={() => this.props.onAnswer({ number: i, value: 1 })}
+              required
             />
             <label className="form-check-label" htmlFor={"q-" + i + "-1"}>
               Sometimes
@@ -87,6 +89,7 @@ class DassQuestion extends React.Component {
               id={"q-" + i + "-2"}
               value="2"
               onClick={() => this.props.onAnswer({ number: i, value: 2 })}
+              required
             />
             <label className="form-check-label" htmlFor={"q-" + i + "-2"}>
               Often
@@ -100,6 +103,7 @@ class DassQuestion extends React.Component {
               id={"q-" + i + "-3"}
               value="3"
               onClick={() => this.props.onAnswer({ number: i, value: 3 })}
+              required
             />
             <label className="form-check-label" htmlFor={"q-" + i + "-3"}>
               Almost always
@@ -148,14 +152,9 @@ class DassForm extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      liked: false,
+      submitted: false,
       questions: questions,
     }
-  }
-
-  Calculate = (event) => {
-    event.preventDefault()
-    this.setState({ liked: true })
   }
 
   onAnswer = ({ number, value }) => {
@@ -165,8 +164,13 @@ class DassForm extends React.Component {
     })
   }
 
+  Calculate = (event) => {
+    event.preventDefault()
+    this.setState({ submitted: true })
+  }
+
   render() {
-    if (this.state.liked) {
+    if (this.state.submitted) {
       return <DassResults answers={this.state.questions} />
     }
 
