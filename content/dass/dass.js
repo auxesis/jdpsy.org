@@ -140,6 +140,7 @@ class DassResults extends React.Component {
   render() {
     return (
       <div>
+        <h1 className="mb-3">Your results</h1>
         <p>Depression: {this.depressionScore()}</p>
         <p>Anxiety: {this.anxietyScore()}</p>
         <p>Stress: {this.stressScore()}</p>
