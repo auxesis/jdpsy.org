@@ -50,7 +50,7 @@ class DassQuestion extends React.Component {
   render() {
     const i = this.props.number
     return (
-      <li key={"q-" + i}>
+      <li>
         <div className="form-group">
           <p>{this.props.text}</p>
           <div className="form-check">
@@ -178,7 +178,7 @@ class DassForm extends React.Component {
       <form onSubmit={this.Calculate}>
         <ol>
           {questions.map((question, i) => {
-            return <DassQuestion number={i} onAnswer={this.onAnswer} {...question} />
+            return <DassQuestion key={i} number={i} onAnswer={this.onAnswer} {...question} />
           })}
         </ol>
         <button type="submit" className="btn btn-success">
