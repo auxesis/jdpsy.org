@@ -42,95 +42,142 @@ const questions = [
   { type: "depression", text: "I felt that life was meaningless." },
 ]
 
+class DassQuestion extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+
+  render() {
+    const i = this.props.number
+    return (
+      <li key={"q-" + i}>
+        <div className="form-group">
+          <p>{this.props.text}</p>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name={"q-" + i}
+              id={"q-" + i + "-0"}
+              value="0"
+              onClick={() => this.props.onAnswer({ number: i, value: 0 })}
+            />
+            <label className="form-check-label" htmlFor={"q-" + i + "-0"}>
+              Never
+            </label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name={"q-" + i}
+              id={"q-" + i + "-1"}
+              value="1"
+              onClick={() => this.props.onAnswer({ number: i, value: 1 })}
+            />
+            <label className="form-check-label" htmlFor={"q-" + i + "-1"}>
+              Sometimes
+            </label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name={"q-" + i}
+              id={"q-" + i + "-2"}
+              value="2"
+              onClick={() => this.props.onAnswer({ number: i, value: 2 })}
+            />
+            <label className="form-check-label" htmlFor={"q-" + i + "-2"}>
+              Often
+            </label>
+          </div>
+          <div className="form-check">
+            <input
+              className="form-check-input"
+              type="radio"
+              name={"q-" + i}
+              id={"q-" + i + "-3"}
+              value="3"
+              onClick={() => this.props.onAnswer({ number: i, value: 3 })}
+            />
+            <label className="form-check-label" htmlFor={"q-" + i + "-3"}>
+              Almost always
+            </label>
+          </div>
+        </div>
+      </li>
+    )
+  }
+}
+
+class DassResults extends React.Component {
+  constructor(props) {
+    super(props)
+  }
+  depressionScore() {
+    return this.props.answers
+      .filter((q) => q.type == "depression")
+      .map((q) => q.value)
+      .reduce((a, b) => a + (b || 0), 0)
+  }
+  anxietyScore() {
+    return this.props.answers
+      .filter((q) => q.type == "anxiety")
+      .map((q) => q.value)
+      .reduce((a, b) => a + (b || 0), 0)
+  }
+  stressScore() {
+    return this.props.answers
+      .filter((q) => q.type == "stress")
+      .map((q) => q.value)
+      .reduce((a, b) => a + (b || 0), 0)
+  }
+  render() {
+    return (
+      <div>
+        <p>Depression: {this.depressionScore()}</p>
+        <p>Anxiety: {this.anxietyScore()}</p>
+        <p>Stress: {this.stressScore()}</p>
+      </div>
+    )
+  }
+}
+
 class DassForm extends React.Component {
   constructor(props) {
     super(props)
-    this.state = { liked: false }
+    this.state = {
+      liked: false,
+      questions: questions,
+    }
+  }
+
+  Calculate = (event) => {
+    event.preventDefault()
+    this.setState({ liked: true })
+  }
+
+  onAnswer = ({ number, value }) => {
+    this.setState((state, props) => {
+      state.questions[number].value = value
+      return { questions: state.questions }
+    })
   }
 
   render() {
     if (this.state.liked) {
-      return "Your results are: ..."
+      return <DassResults answers={this.state.questions} />
     }
 
     return (
-      <form>
+      <form onSubmit={this.Calculate}>
         <ol>
           {questions.map((question, i) => {
-            return (
-              <li key={"q" + i}>
-                <div className="form-group">
-                  <p>{question.text}</p>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name={"q-" + i}
-                      id={"q-" + i + "-0"}
-                      value="0"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={"q-" + i + "-0"}
-                    >
-                      Never
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name={"q-" + i}
-                      id={"q-" + i + "-1"}
-                      value="0"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={"q-" + i + "-1"}
-                    >
-                      Sometimes
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name={"q-" + i}
-                      id={"q-" + i + "-2"}
-                      value="0"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={"q-" + i + "-2"}
-                    >
-                      Often
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="radio"
-                      name={"q-" + i}
-                      id={"q-" + i + "-3"}
-                      value="0"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor={"q-" + i + "-3"}
-                    >
-                      Almost always
-                    </label>
-                  </div>
-                </div>
-              </li>
-            )
+            return <DassQuestion number={i} onAnswer={this.onAnswer} {...question} />
           })}
         </ol>
-        <button
-          type="submit"
-          className="btn btn-success"
-          onClick={() => this.setState({ liked: true })}
-        >
+        <button type="submit" className="btn btn-success">
           Calculate
         </button>
       </form>
